@@ -1,0 +1,2 @@
+(this["webpackJsonpreact-02-phonebook"]=this["webpackJsonpreact-02-phonebook"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var c=n(1),o=n.n(c),r=n(3),s=n.n(r),a=(n(8),n(0));var i=function(){return Object(a.jsx)("div",{className:"App",children:"222"})};s.a.render(Object(a.jsx)(o.a.StrictMode,{children:Object(a.jsx)(i,{})}),document.getElementById("root"))},8:function(e,t,n){}},[[10,1,2]]]);
+//# sourceMappingURL=main.d12eba37.chunk.js.map
