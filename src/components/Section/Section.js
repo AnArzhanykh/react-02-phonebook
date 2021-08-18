@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import styles from'./Section.module.scss';
 
 const Section =(props)=>{
     return(
-        <div>
+        <div className={styles.Section}>
             {props.children}
         </div>
     )

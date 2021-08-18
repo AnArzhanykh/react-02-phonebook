@@ -47,7 +47,7 @@ class App extends Component {
 
 
   render() {
-    const {contacts,name, number, filter} = this.state
+    const {contacts, filter} = this.state
 
     const normolizedFilter =filter.toLowerCase()
 

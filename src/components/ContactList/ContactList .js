@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import Button from '../Button'
 
 const ContactList = ({visibleName, onClick}) =>{
 
     return(
     <ul>
-        {visibleName.map(({name, id, number})=><li key={id}>{name}:{number} <button onClick={()=>onClick(id)}>Delete</button> </li>)}
+        {visibleName.map(({name, id, number})=><li key={id}>{name}:{number} <Button onClick={onClick} id={id}>Delete</Button> </li>)}
     </ul>
     )
 }
