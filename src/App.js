@@ -18,16 +18,17 @@ class App extends Component {
   };
 
   addContacts = (name, number) => {
-
-
-    const messageAlert = `${name} is already in contacts`;
-    this.searchContact(name) ? alert(messageAlert) : (this.setState((prevState) => ({
+    this.searchContact(name) ? this.messageAlert(name) : (this.setState((prevState) => ({
         contacts: [
           ...prevState.contacts,
           { name: name, id: uuidv4(), number: number },
         ],
       })))
   };
+
+  messageAlert(name){
+    alert(`${name} is already in contacts`)
+  }
 
   searchContact(name) {
     const { contacts } = this.state;
