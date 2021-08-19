@@ -15,13 +15,7 @@ const ContactList = ({visibleName, onClick}) =>{
 ContactList.propTypes = {
     visibleName: PropTypes.array.isRequired,
     onClick: PropTypes.func.isRequired,
-    // visibleName: PropTypes.shape(
-    //         {
-    //             id: PropTypes.string.isRequired,
-    //             name:  PropTypes.string.isRequired,
-    //             number: PropTypes.string.isRequired,
-    //         }    
-    // ).isRequired,
+
 }
 
 export default ContactList
