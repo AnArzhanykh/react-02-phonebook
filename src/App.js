@@ -18,22 +18,26 @@ class App extends Component {
   };
 
   addContacts = (name, number) => {
-    if (this.searchContact(name))
-      this.setState((prevState) => ({
-        contacts: [
-          ...prevState.contacts,
-          { name: name, id: uuidv4(), number: number },
-        ],
-      }));
-      
+
+
+    const messageAlert = `${name} is already in contacts`;
+    this.searchContact(name) 
+    // this.searchContact(name) ? (this.setState((prevState) => ({
+    //     contacts: [
+    //       ...prevState.contacts,
+    //       { name: name, id: uuidv4(), number: number },
+    //     ],
+    //   })): alert(messageAlert))
   };
 
   searchContact(name) {
     const { contacts } = this.state;
     const normolizedName = name.toLowerCase();
-    const messageAlert = `${name} is already in contacts`;
-    const contact = contacts.find(({name})=>name=== normolizedName)
-    console.log(contact);
+    // const messageAlert = `${name} is already in contacts`;
+    const contact = contacts.find(({name})=> name.toLowerCase() === normolizedName)
+    console.log(contact.name);
+    console.log(name);
+    console.log(normolizedName);
     // for (let i = 0; i < contacts.length; i += 1) {
     //   if (contacts[i].name === normolizedName) {
     //     alert(messageAlert);
