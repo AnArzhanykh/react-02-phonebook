@@ -18,7 +18,7 @@ class App extends Component {
   };
 
   addContacts = (name, number) => {
-    if (this.searchCreatedName(name))
+    if (this.searchContact(name))
       this.setState((prevState) => ({
         contacts: [
           ...prevState.contacts,
@@ -28,11 +28,11 @@ class App extends Component {
       
   };
 
-  searchCreatedName(name) {
+  searchContact(name) {
     const { contacts } = this.state;
     const normolizedName = name.toLowerCase();
     const messageAlert = `${name} is already in contacts`;
-    const contact = contacts.find(item=>item.name=== normolizedName)
+    const contact = contacts.find(({name})=>name=== normolizedName)
     console.log(contact);
     // for (let i = 0; i < contacts.length; i += 1) {
     //   if (contacts[i].name === normolizedName) {
