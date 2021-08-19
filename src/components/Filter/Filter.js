@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types'
+import styles from './Filter.module.scss'
 
 const Filter = ({onChange}) =>{
     return(
         <div>
-            <p>find contacts by name</p>
+            <p>Find contacts by name</p>
             <input
                 type="text"
                 name="name"

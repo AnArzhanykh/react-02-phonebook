@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 import Button from '../Button'
+import styles from './ContactList.module.scss'
 
 const ContactList = ({visibleName, onClick}) =>{
 
     return(
-    <ul>
-        {visibleName.map(({name, id, number})=><li key={id}>{name}:{number} <Button onClick={onClick} id={id}>Delete</Button> </li>)}
+    <ul className={styles.ContactList}>
+        {visibleName.map(({name, id, number})=><li className={styles.item}key={id}>{name}:{number} <Button onClick={onClick} id={id}>Delete</Button> </li>)}
     </ul>
     )
 }

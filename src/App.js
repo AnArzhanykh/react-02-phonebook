@@ -4,6 +4,7 @@ import ContactList from './components/ContactList'
 import Filter from './components/Filter'
 import ContactForm from './components/ContactForm'
 import Section from './components/Section'
+import './styles/shared.scss'
 
 class App extends Component {
 
@@ -59,7 +60,7 @@ class App extends Component {
         <Section>
           <h1>Phonebook</h1>
           <ContactForm filter={filter} addContacts={this.addContacts}/>
-          <h2>Contacts</h2>
+          <h2 className='title__contacts'>Contacts</h2>
           <Filter onChange={this.filteredName}/>
           <ContactList visibleName={visibleName} onClick={this.deleteFriend}/>
         </Section>
