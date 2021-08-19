@@ -25,7 +25,7 @@ class ContactForm extends Component {
 
     render(){
     const {name, number} = this.state
-    const {filter, addContacts}= this.props
+    const {addContacts}= this.props
 
     return(
         <div className={styles.ContactForm}>
@@ -54,7 +54,7 @@ class ContactForm extends Component {
                 />
             </label>
 
-            <button className={styles.ContactForm__button} type="submit" value={filter} onClick={()=>addContacts(name, number, this.cleanInput())}>
+            <button className={styles.ContactForm__button} type="submit"  onClick={()=>addContacts(name, number, this.cleanInput())}>
             Add contact
             </button>
         </div>
@@ -65,7 +65,6 @@ class ContactForm extends Component {
 
 
 ContactForm.propTypes = {
-    filter: PropTypes.string.isRequired,
     addContacts: PropTypes.func.isRequired,
 }
 export default ContactForm

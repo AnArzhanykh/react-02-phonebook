@@ -61,7 +61,7 @@ class App extends Component {
       <>
         <Section>
           <h1>Phonebook</h1>
-          <ContactForm filter={filter} addContacts={this.addContacts} />
+          <ContactForm  addContacts={this.addContacts} />
           <h2 className="title__contacts">Contacts</h2>
           <Filter onChange={this.filteredName} />
           <ContactList visibleName={visibleName} onClick={this.deleteFriend} />
