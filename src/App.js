@@ -21,30 +21,20 @@ class App extends Component {
 
 
     const messageAlert = `${name} is already in contacts`;
-    this.searchContact(name) 
-    // this.searchContact(name) ? (this.setState((prevState) => ({
-    //     contacts: [
-    //       ...prevState.contacts,
-    //       { name: name, id: uuidv4(), number: number },
-    //     ],
-    //   })): alert(messageAlert))
+    this.searchContact(name) ? alert(messageAlert) : (this.setState((prevState) => ({
+        contacts: [
+          ...prevState.contacts,
+          { name: name, id: uuidv4(), number: number },
+        ],
+      })))
   };
 
   searchContact(name) {
     const { contacts } = this.state;
     const normolizedName = name.toLowerCase();
-    // const messageAlert = `${name} is already in contacts`;
     const contact = contacts.find(({name})=> name.toLowerCase() === normolizedName)
-    console.log(contact.name);
-    console.log(name);
-    console.log(normolizedName);
-    // for (let i = 0; i < contacts.length; i += 1) {
-    //   if (contacts[i].name === normolizedName) {
-    //     alert(messageAlert);
-    //     return false;
-    //   }
-    // }
-    // return true;
+    return contact
+
   }
 
   filteredName = (e) => {
